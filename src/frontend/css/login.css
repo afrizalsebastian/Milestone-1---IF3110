@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #1DD05E;
+    --color-secondary: #A1A1A1;
+    --box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --box-shadow-primary: rgba(0, 255, 98, 0.309) 0px 20px 25px -5px, rgba(0, 255, 98, 0.309) 0px 10px 10px -5px;
+    --color-icon: white;
+    --padding-section: 20px 9%;
+    --padding-header: 0 9%;
+    --background-header: white;
+    --gradient: linear-gradient(0deg, rgba(51, 51, 51, 0.63) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111111;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container{
+    width : 65%;
+    height: 550px;
+    display: grid;
+    grid-template-areas: "container-1 container-2";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 1px 1px 3px 2px rgba(255, 226, 226, 0.48);
+    border-radius: 10px;
+    overflow:auto;
+}
+
+.main-container .container-1{
+    background-color: black;
+    display: grid;
+    grid-template-areas: 
+    "back-arrow"
+    "logo"
+    "binotify-title"
+    "binotify-slogan";
+    grid-template-rows: 1fr 8fr 2fr 2fr;
+}
+
+.back-arrow{
+    position: relative;
+    left: 23px;
+    top : 20px;
+    color: #1db954;
+}
+
+.back-arrow:hover{
+    color: var(--color-primary);
+}
+
+.main-container .container-1 img{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    grid-area: logo;
+}
+
+.main-container .container-1 h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    grid-area: binotify-title;
+    margin: auto;
+}
+
+.main-container .container-1 p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    grid-area: binotify-slogan;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main-container .container-2{
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "navigation"
+    "login-from";
+    grid-template-rows: 1fr 7fr;
+}
+
+.navigation{
+    height: 40px;
+    margin-top: 25px;
+}
+.navigation a{
+    position: relative;
+    left: 37%;
+}
+.navigation a span{
+    text-decoration: none;
+    color: black;
+    background-color: var(--color-primary);
+    font-size: 15px;
+    padding: 8px;
+    width: 25%;
+    border-radius: 15px;
+}
+.navigation a span:hover{
+    color: white;
+    box-shadow: var(--box-shadow-primary);
+}
+.login-form{
+    display: grid;
+    grid-template-areas: 
+    "tlogin"
+    "plogin"
+    "flogin";
+    grid-template-rows: 1fr 0.7fr 5fr;
+}
+.login-form h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    grid-area: tlogin;
+}
+.login-form p{
+    font-size: 15px;
+    margin-bottom: 25px;
+    grid-area: plogin;
+}
+
+.login-form form{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    grid-area: flogin;
+}
+
+.login-form form div label{
+    font-size: 14px;
+}
+
+.login-form form div input{
+    margin-top: 10px;
+    width: 15vw;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.login-form form .password{
+    margin-top: 15px;
+}
+
+.login-form form button{
+    margin: 25px auto;
+    width: 75px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-form form button:hover{
+    color: white;
+    box-shadow: var(--box-shadow-primary);
+
+}
+
+.error-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.error{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.btn-error{
+    margin-top: 5px;
+    background-color: var(--color-primary);
+    font-size: 0.75rem; 
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-error:hover{
+    box-shadow: var(--box-shadow-primary);
+    color:white;
+}
+

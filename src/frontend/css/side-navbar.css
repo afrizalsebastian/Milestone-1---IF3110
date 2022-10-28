@@ -1,0 +1,61 @@
+.side-navbar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #000000;
+    width: 230px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.side-navbar .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    padding-top: 30px;
+    padding-left: 5px; 
+}
+
+.side-navbar .logo img{
+    width : 70px;
+    border-radius: 25%;
+}
+
+.side-navbar .logo span{
+    font-weight: bold;
+    padding: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.side-navbar a{
+    position: relative;
+    color: #ddd;
+    font-size: 15px;
+    display: table;
+    width : 300px;
+    padding :5px;
+    margin-bottom: 15px;
+}
+
+.side-navbar .fa-solid{
+    position : relative;
+    width: 70px;
+    height: 40px;
+    top : 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.side-navbar .nav-item{
+    position : relative;
+    top : 12px;
+    margin-left: 10px;
+}
+
+.side-navbar a :hover{
+    color: #fff;
+}

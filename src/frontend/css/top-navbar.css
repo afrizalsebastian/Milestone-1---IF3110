@@ -1,0 +1,112 @@
+.top-navbar{
+    display: grid;
+    grid-template-areas: "search-box auth";
+    grid-template-columns: 8fr 2fr;
+    padding: 20px;
+    padding-left: 450px;
+    height: 80px;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: black;
+    color: #dddd;
+    position: fixed;
+}
+
+.top-navbar .search-box{
+    position: relative;
+    left: -235px;
+}
+
+.top-navbar .search-box input{
+    width: 450px;
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.top-navbar .search-box button{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #1db954;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left:415px;
+}
+
+.top-navbar .search-box button:hover{
+    background-color: grey;
+    color: #111;
+}
+
+.top-navbar div ul{
+    display: grid;
+    grid-template-areas: "register-btn login-btn";
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    right: 100px;
+    width: 250px;
+}
+
+.top-navbar li{
+    padding: 5px;
+}
+
+.top-navbar ul .register-btn a{
+    color: #ddd;
+    font-size: 22px;
+}
+
+.top-navbar ul .register-btn a:hover{
+    color: white;
+}
+
+.top-navbar ul .login-btn a{
+    padding:8px 23px;
+    font-size: 22px;
+    background-color: white;
+    width: 80px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+}
+
+.top-navbar ul .login-btn a:hover{
+    background-color: #111;
+    color: white;
+}
+
+
+.top-navbar ul .logout-btn a{
+    padding:8px 23px;
+    font-size: 22px;
+    background-color: white;
+    width: 80px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+}
+
+.top-navbar ul .logout-btn a:hover{
+    background-color: #111;
+    color: white;
+}
+
+.top-navbar ul .nav-username{
+    display: grid;
+    grid-template-areas: "fas span";
+    grid-template-columns: 3fr 8fr;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+}

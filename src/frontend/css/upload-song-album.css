@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #1DD05E;
+    --color-secondary: #A1A1A1;
+    --box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --box-shadow-primary: rgba(0, 255, 98, 0.309) 0px 20px 25px -5px, rgba(0, 255, 98, 0.309) 0px 10px 10px -5px;
+    --color-icon: white;
+    --padding-section: 20px 9%;
+    --padding-header: 0 9%;
+    --background-header: white;
+    --gradient: linear-gradient(0deg, rgba(51, 51, 51, 0.63) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--color-primary);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111111;
+    margin-left: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container{
+    padding-top: 100px;
+}
+
+.uploader{
+    width: 65%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-areas: 
+    "songs"
+    "album";
+    row-gap: 50px;
+}
+
+.uploader h1{
+    color: black;
+    background-color: var(--color-primary);
+    width: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-primary);
+    text-align: center;
+}
+
+.song-uploader{
+    height: 500px;
+    background-color: #181818;
+    box-shadow: var(--box-shadow-primary);
+}
+
+.album-uploader{
+    height: 500px;
+    background-color: #181818;
+    box-shadow: var(--box-shadow-primary);
+
+}
+
+.uploader h3{
+    color: black;
+    background-color: var(--color-primary);
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-primary);
+    text-align: center;
+}
+
+.song-uploader form,
+.album-uploader form{
+    display: grid;
+    grid-template-areas: 
+    "keyb file"
+    "button button";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+}
+
+.s-keyb{
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "date"
+    "singer"
+    "album"
+    "genre";
+    row-gap: 35px;
+    grid-area: keyb;
+}
+
+.date-in{
+    color-scheme: dark;
+}
+.key-input{
+    width: 45%;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    border-radius: 8px;
+    color: white;
+    background-color: #111111;
+}
+
+.key-input:focus{
+    box-shadow: var(--box-shadow-primary);
+}
+
+.s-file{
+    display: grid;
+    grid-template-areas:
+    "lblau"
+    "audio"
+    "lblimg"
+    "image";
+    color: white;
+    margin:2px auto;
+}
+
+.album-uploader .s-file{
+    margin: auto;
+}
+
+.song-uploader button,
+.album-uploader button{
+    grid-area: button;
+    margin: auto;
+    margin-top: 35px;
+    width: 70px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+}
+
+.song-uploader button:hover{
+    color: white;
+    box-shadow: var(--box-shadow-primary);
+}
+
+.message-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.message{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.btn-message{
+    margin-top: 5px;
+    background-color: var(--color-primary);
+    font-size: 0.75rem; 
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-message:hover{
+    box-shadow: var(--box-shadow-primary);
+    color:white;
+}
+
+
+

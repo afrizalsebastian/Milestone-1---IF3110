@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #1DD05E;
+    --color-secondary: #A1A1A1;
+    --box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --box-shadow-primary: rgba(0, 255, 98, 0.309) 0px 20px 25px -5px, rgba(0, 255, 98, 0.309) 0px 10px 10px -5px;
+    --color-icon: white;
+    --padding-section: 20px 9%;
+    --padding-header: 0 9%;
+    --background-header: white;
+    --gradient: linear-gradient(0deg, rgba(51, 51, 51, 0.63) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+body {
+    --background-header: #181818;
+    --box-shadow-hover: rgba(4, 252, 58, 0.283) 0px 1px 2px, rgba(4, 252, 58, 0.283) 0px 2px 4px, rgba(4, 252, 58, 0.283) 0px 4px 8px, rgba(4, 252, 58, 0.283) 0px 8px 16px, rgba(4, 252, 58, 0.283) 0px 16px 32px, rgba(4, 252, 58, 0.283) 0px 32px 64px;
+    --box-shadow: none;
+    background-color: #111111;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: var(--padding-header);
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+h1{
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo h3 {
+    margin-left: 20px;
+}
+
+.search {
+    background-color: #111111;
+    border: 2px solid #30363D;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.search input {
+    background: #111111;
+    border: none;
+    color: white;
+}
+
+.search input:focus .search {
+    border: 2px solid var(--color-primary);
+}
+
+.containerContent {
+    padding-left: 230px;
+    padding-top: 80px;
+    padding-right: 10%;
+}
+
+main {
+    padding: var(--padding-section);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 55px;
+}
+
+.containerAlbum {
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-header);
+    width: fit-content;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.containerAlbum:hover {
+    box-shadow: var(--box-shadow-hover);
+    color: var(--background-header);
+}
+
+.containerAlbum:hover {
+    background-color: var(--color-primary);
+}
+
+.containerAlbum:hover .judul a {
+    color: var(--color-primary);
+    background-color: var(--background-header);
+}
+
+.cover-album {
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+}
+
+.judul {
+    padding: 15px;
+    position: relative;
+}
+
+.judul a {
+    color: var(--background-header);
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 15px;
+    margin: 0 10px;
+    font-size: 18px;
+    color: var(--color-primary);
+}
+
+.pagination a:nth-child(1),
+.pagination a:nth-child(6) {
+    /* border: none; */
+}

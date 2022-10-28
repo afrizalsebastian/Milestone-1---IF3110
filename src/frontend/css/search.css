@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #1DD05E;
+    --color-secondary: #A1A1A1;
+    --box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --box-shadow-primary: rgba(0, 255, 98, 0.309) 0px 20px 25px -5px, rgba(0, 255, 98, 0.309) 0px 10px 10px -5px;
+    --color-icon: white;
+    --padding-section: 20px 9%;
+    --padding-header: 0 9%;
+    --background-header: white;
+    --gradient: linear-gradient(0deg, rgba(51, 51, 51, 0.63) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+body {
+    --background-header: #181818;
+    --box-shadow-hover: rgba(4, 252, 58, 0.283) 0px 1px 2px, rgba(4, 252, 58, 0.283) 0px 2px 4px, rgba(4, 252, 58, 0.283) 0px 4px 8px, rgba(4, 252, 58, 0.283) 0px 8px 16px, rgba(4, 252, 58, 0.283) 0px 16px 32px, rgba(4, 252, 58, 0.283) 0px 32px 64px;
+    --box-shadow: none;
+    background-color: #111111;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: var(--padding-header);
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+main {
+    padding: var(--padding-section);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 55px;
+}
+
+.containerContent {
+    padding-left: 350px;
+    padding-top: 80px;
+    padding-right: 10%;
+}
+
+.containerSortFilter{
+    display: grid;
+    grid-template-areas: 
+    "itemSortFilter itemSortFilter itemSortFilter";
+}
+
+/* BUTTON */
+.btnSortByTitle, .btnSortByYear{
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+}
+
+option, select{
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    cursor : pointer;
+}
+
+/*TABLE*/
+h1{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.containerHeader{
+    display: grid;
+    font-size: 20px;
+    padding-bottom: 10px;
+    grid-template-areas: 
+    "itemHeader1 itemHeader2 itemHeader2 itemHeader3 itemHeader4";
+    grid-template-columns: 1fr 5fr 5fr 9fr 3fr;
+}
+
+.itemHeader1{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 45%;
+    grid-area: itemHeader1;
+}
+.itemHeader2{
+    grid-area: itemHeader2;
+}
+.itemHeader3{
+    grid-area: itemHeader3;
+}
+.itemHeader4{
+    grid-area: itemHeader4;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    padding-right: 5%;
+}
+.containerItem{
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-header);
+    border-radius: 15px;
+    transition: 0.3s;
+    display: grid;
+    grid-template-areas: 
+    "no cover title album duration"
+    "no cover singer album duration";
+    grid-template-columns: 1fr 1.5fr 8.5fr 9fr 3fr;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.containerItem:hover{
+    box-shadow: var(--box-shadow-hover);
+    color: var(--background-header);
+    background-color: var(--color-primary);
+}
+.no{
+    grid-area: no;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 45%;
+}
+.cover{
+    display: flex;
+    grid-area: cover;
+    align-items: center;
+}
+.title{
+    grid-area: title;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    align-items:flex-end;
+}
+.singer{
+    grid-area: singer;
+    display: flex;
+    align-items: flex-start;
+}
+.album{
+    grid-area: album;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+.duration{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    grid-area: duration;
+    padding-right: 5%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 15px;
+    margin: 0 10px;
+    font-size: 18px;
+    color: var(--color-primary);
+}
+
+.pagination a:nth-child(1),
+.pagination a:nth-child(6) {
+    /* border: none; */
+}

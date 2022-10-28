@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #1DD05E;
+    --color-secondary: #A1A1A1;
+    --box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --box-shadow-primary: rgba(0, 255, 98, 0.309) 0px 20px 25px -5px, rgba(0, 255, 98, 0.309) 0px 10px 10px -5px;
+    --color-icon: white;
+    --padding-section: 20px 9%;
+    --padding-header: 0 9%;
+    --background-header: white;
+    --gradient: linear-gradient(0deg, rgba(51, 51, 51, 0.63) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--color-primary);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111111;
+    margin-left: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container{
+    padding-top: 100px;
+}
+
+.all-user-title{
+    color: black;
+    background-color: var(--color-primary);
+    width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-primary);
+    text-align: center;
+}
+
+.name-table-container{
+    display: grid;
+    grid-template-areas: "table-header1 table-header2 table-header3 table-header4";
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    font-size: 25px;
+    color: var(--background-header);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 3px 0px;
+    padding : 0px 5px;
+    align-items: center;
+}
+
+.see-users{
+    margin: auto;
+    width: 70%;
+    height: 55vh;
+    text-align: center;
+    overflow:auto;
+}
+
+.users-value{
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas: "user-id user-name email-add is-admin";
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    font-size: 20px;
+    color: var(--background-header);
+    height: 50px;
+    padding : 0px 5px;
+    align-items: center;
+    background-color: #181818;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: var(--box-shadow-hover);
+}
