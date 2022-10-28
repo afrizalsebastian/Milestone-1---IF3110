@@ -1,4 +1,4 @@
-# Binotify - Milestone 1 IF3110
+# Binotify - Milestone 1 IF3110 (BACKUP)
 Music player berbasis web yang dibuat menggunakan HMTL5, CSS, JS, dan MySQL
 
 
@@ -48,3 +48,6 @@ Ghebyon Tohada Nainggolan
 - Halaman Daftar Album front-end & back-end
 - Halaman Search, Sort, and Filter front-end & back-end
 - Halaman detail Lagu front-end
+
+
+NOTE : main folder ada di GitLab Infromatika
